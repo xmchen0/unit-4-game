@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Crystal Collector :: A Javascript Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Link to CSS-->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div id="background">
+    <!--Instructions-->
+    <h1>Crystal Collector</h1>
+    <h2>How To Play:</h2>
+    <ul id="instructions">
+        <li>To play the game you will be given a random number displayed in the box below.</li>
+        <li>You are presented with four (4) rare crystals. Hidden in the crystal are random numbers. You must click on it to reveal the number.</li>
+        <li>Players must click on the crystals to add up the total matching the random number dispalyed in the box below.</li>
+        <li>When your score matches the random number, you win.</li>
+        <li>When your score exceeds the random number, you lose.</li>
+        <li>The random number and hidden numbers within crystals will reset each time the game starts.</li>
+    </ul>
+
+    <!--Random Number and Counter Container-->
+    <div id="game-screen">
+        <div id="random-number">
+        </div>
+            <div id="win-lose-counter">
+            <p>Wins: <span id="winCounter"></span></p>
+            <p>Losses: <span id="loseCounter"></span></p>
+        </div>
+    </div>
+
+    <!--Crystals Images-->
+    <div id="crystal-container">
+        <div class="crystals">
+            <img src="" alt="Crystal" id="crystal-1"/>
+        </div>
+        <div class="crystals">
+            <img src="" alt="Crystal" id="crystal-2"/>
+        </div>
+        <div class="crystals">
+            <img src="" alt="Crystal" id="crystal-3"/>
+        </div>
+        <div class="crystals">
+            <img src="" alt="Crystal" id="crystal-4"/>
+        </div>
+    </div>
+
+    <!--Player Score Container-->
+    <div id="score-container">
+        <div id="total-header">Your total score is: </div>
+        <div id="total-score"><span id="totalScore"></span></div>
+        </div>
+    </div>
+
+<!--Link to JQuery-->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<!--Link to JavaScript-->
+<script src="assets/javascript/game.js" type="text/javascript"></script>
+
+
+  <script src="assets/javascript/game.js"></script>
+</body>
