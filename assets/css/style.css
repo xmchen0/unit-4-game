@@ -1,0 +1,94 @@
+body {
+    margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    color: #ffffff;
+}
+
+#background {
+    background: url(https://cache.desktopnexus.com/cropped-wallpapers/159/159377-1440x900-[DesktopNexus.com].jpg?st=gknfO39G8eT94inBzfuaYg&e=1549605478) no-repeat;
+    background-size: contain;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    opacity: 0.85;
+}
+
+#heading {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    max-width: 80%;
+    margin: auto;
+    position: relative;
+    background-color: black;
+}
+
+#instructions {
+    max-width: 80%;
+    margin: auto;
+    padding: 15px;
+    position: relative;
+    background-color: black;
+}
+
+section {
+    width: 80%;
+    height: 100px;
+    background: azure;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#random-number {
+    border: 1px solid black;
+    width: 50%;
+    height: 100px;
+    float: left;
+    background-color: #c43f3f;
+    color: black;
+    position: relative;
+    text-align: center;
+}
+
+#win-lose-counter {
+    text-align: center;
+    border: 1px solid black;
+    margin-left: 50%;
+    width: 50%;
+    height: 100px;
+    background: black;
+    background-color: azure;
+    position: relative;
+    color: black;
+}
+
+
+#crystal-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    margin: 5px;    
+}
+
+#score-container {
+    padding: 20px;
+    background-color: azure;
+    color: black;
+    text-align: center;
+    max-width: 80%;
+    margin: auto;
+    position: relative;
+}

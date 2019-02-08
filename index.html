@@ -7,51 +7,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Link to CSS-->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!--Linke to Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lato|Sacramento" rel="stylesheet">
 </head>
 
 <body>
     <div id="background">
-    <!--Instructions-->
-    <h1>Crystal Collector</h1>
-    <h2>How To Play:</h2>
-    <ul id="instructions">
-        <li>To play the game you will be given a random number displayed in the box below.</li>
-        <li>You are presented with four (4) rare crystals. Hidden in the crystal are random numbers. You must click on it to reveal the number.</li>
-        <li>Players must click on the crystals to add up the total matching the random number dispalyed in the box below.</li>
-        <li>When your score matches the random number, you win.</li>
-        <li>When your score exceeds the random number, you lose.</li>
-        <li>The random number and hidden numbers within crystals will reset each time the game starts.</li>
-    </ul>
-
-    <!--Random Number and Counter Container-->
-    <div id="game-screen">
-        <div id="random-number">
-        </div>
-            <div id="win-lose-counter">
-            <p>Wins: <span id="winCounter"></span></p>
-            <p>Losses: <span id="loseCounter"></span></p>
-        </div>
+    <!--Heading-->
+    <div id="heading">
+        <h1>Crystal Collector</h1>
     </div>
+
+    <!--Instructions-->
+    <div id="instructions">
+        <strong>HOW TO PLAY:</strong>
+        <p>To play the game you will be given a random number displayed in the box below.</p>
+        <p>You are presented with four (4) rare crystals. Hidden in the crystal are random numbers. You must click on it to reveal the number.</p>
+        <p>Players must click on the crystals to add up the total matching the random number dispalyed in the box below.</p>
+        <p>When your score matches the random number, you win.</p>
+        <p>When your score exceeds the random number, you lose.</p>
+        <p>The random number and hidden numbers within crystals will reset each time the game restarts.</p>
+    </div>
+
+    <!--Random Number Container-->
+    
+    <section>
+    <div id="random-number">
+        <p>Match This Number:</p>
+    </div>
+    
+    <!--Counter Container-->
+    <div id="win-lose-counter">
+        <p><strong>WINS: <span id="winCounter"></span></strong></p>
+        <p><strong>LOSSES: <span id="loseCounter"></span></strong></p>
+    </div>
+    </section>
 
     <!--Crystals Images-->
     <div id="crystal-container">
         <div class="crystals">
-            <img src="" alt="Crystal" id="crystal-1"/>
+            <img src="https://i.ibb.co/bJcrhsW/Screen-Shot-2019-02-08-at-12-56-19-am.png" alt="Crystal" id="crystal-1"/>
         </div>
         <div class="crystals">
-            <img src="" alt="Crystal" id="crystal-2"/>
+            <img src="https://i.ibb.co/q9pr7dJ/Screen-Shot-2019-02-08-at-12-56-30-am.png" alt="Crystal" id="crystal-2"/>
         </div>
         <div class="crystals">
-            <img src="" alt="Crystal" id="crystal-3"/>
+            <img src="https://i.ibb.co/9bgXgD1/Screen-Shot-2019-02-08-at-12-56-39-am.png" alt="Crystal" id="crystal-3"/>
         </div>
         <div class="crystals">
-            <img src="" alt="Crystal" id="crystal-4"/>
+            <img src="https://i.ibb.co/m9QDm47/Screen-Shot-2019-02-08-at-12-56-49-am.png" alt="Crystal" id="crystal-4"/>
         </div>
     </div>
 
     <!--Player Score Container-->
     <div id="score-container">
-        <div id="total-header">Your total score is: </div>
+        <div id="total-header"><strong>Your total score is: </strong></div>
         <div id="total-score"><span id="totalScore"></span></div>
         </div>
     </div>
