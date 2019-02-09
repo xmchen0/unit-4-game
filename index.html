@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Link to CSS-->
     <link rel="stylesheet" href="assets/css/style.css">
-    <!--Linke to Google Fonts-->
+    <!--Link to Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Lato|Sacramento" rel="stylesheet">
+    <!--Link to jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -22,22 +24,21 @@
     <div class="container">
     <div id="instructions">
         <div><strong>AIM OF THE GAME:</strong></div>
-        <p>To match your total score to the random number.</p>
+        <p>To match your total score to the random number to guess.</p>
         <br>
         <div><strong>HOW TO PLAY:</strong></div>
-        <p>1. To play the game you will be given a random number displayed in the red box.</p>
-        <p>2. You are presented with four (4) rare crystals. Hidden in the crystals are random numbers. You must click on it to reveal the number.</p>
-        <p>3. Players must click on the crystals to add up the total matching the random number displayed in the red box.</p>
-        <p>4. When your score matches the random number, you win.</p>
-        <p>5. When your score exceeds the random number, you lose.</p>
-        <p>6. The random number and hidden numbers within crystals will reset each time the game restarts.</p>
+        <p>[ 1 ] To play the game you will be given a random number displayed in the blue circle.</p>
+        <p>[ 2 ] You are presented with four (4) rare crystals. Hidden in the crystals are random numbers. You must click on it to reveal the number.</p>
+        <p>[ 3 ] Players must click on the crystals to add up the total matching the random number displayed in the blue circle.</p>
+        <p>[ 4 ] When your score matches the random number, you win.</p>
+        <p>[ 5 ] When your score exceeds the random number, you lose.</p>
+        <p>[ 6 ] The random number and hidden numbers within crystals will reset each time the game restarts.</p>
     </div>
 
     <!--Random Number Container-->
     <div id="game-screen">
-    <div id=randomNumberToGuess>
-        <p><strong>Number to Guess:</strong></p>
-    </div>
+        <p><strong>Number to guess:</strong></p>
+    <div id=randomNumberToGuess></div>
     
     <!--Counter Container-->
     <div id="win-lose-counter">
@@ -69,11 +70,14 @@
     </div>
     </div>
 
-<!--Link to JQuery-->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <!--Footer-->
+    <footer id="footer">
+        <p>© 2019 Xiao Mei (Kathy) Chen</p>
+    </footer>
+
 <!--Link to JavaScript-->
 <script src="assets/javascript/game.js" type="text/javascript"></script>
 
-
-  <script src="assets/javascript/game.js"></script>
 </body>
+
+</html>
