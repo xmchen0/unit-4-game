@@ -58,7 +58,7 @@ body {
     clear: both;
 }
 
-#random-number {
+#randomNumberToGuess {
     width: 50%;
     height: 122px;
     float: left;
