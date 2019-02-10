@@ -1,11 +1,11 @@
 /* UofT Bootcamp 2019 - Crystal Collector */
 
-/// GLOBAL VARIABLES
+/// ***** GLOBAL VARIABLES *****
 
 //1. random generated number
 var randomNumber = Math.floor(Math.random() * (101)) + 19; // define random integar between 19 and 120
 console.log(randomNumber)
-$("#randomNumberToGuess").text(randomNumber); // get randomNumberToGuess id and print out the random number displayed
+$("#guessNumber").text(randomNumber); // get randomNumberToGuess id and print out the random number displayed
 
 //2. win/lose counter
 var wins = 0;                   // win counter contains an integar value of zero
@@ -24,7 +24,7 @@ $("#totalScore").text(playerCounter);   // get totalScore id and print out the v
 var playerCounter = 0;                  // player score counter contains an integer value of zero
 
 
-/// FUNCTIONS
+/// ***** FUNCTIONS *****
 
 //1. at the start of the game, randomly generated number is displayed
 //2. four (4) crystals represents a number hidden from player
@@ -37,8 +37,8 @@ var playerCounter = 0;                  // player score counter contains an inte
                 win();
             } else if (playerCounter > randomNumber) {
                 lose();
-            }   
-        }) 
+            }
+        })
 
     $("#crystal2").click(function() {
         playerCounter = playerCounter + crystalTwo;
@@ -64,9 +64,9 @@ var playerCounter = 0;                  // player score counter contains an inte
         playerCounter = playerCounter + crystalFour;
         $("#totalScore").text(playerCounter); 
             if (playerCounter === randomNumber) {
-            win();
+                win();
             } else if (playerCounter > randomNumber) {
-            lose();
+                lose();
             }   
         })  
 
@@ -76,7 +76,7 @@ var playerCounter = 0;                  // player score counter contains an inte
 //5.3 reset total score to zero, 
 //5.4 reset crystals to random numbers
 function win() {
-    window.alert("You win! Congratulations!");
+    window.alert("You win! Congratulations! 🎉🎉🎉");
     wins++;
     $("#winCount").text(wins);
     restart();
@@ -88,7 +88,7 @@ function win() {
 //6.3 reset total score to zero, 
 //6.4 reset crystals to random numbers
 function lose() {
-    window.alert("You lose! Try again.");
+    window.alert("You lose! 👎 Try again.");
     losses++;
     $("#loseCount").text(losses);
     restart();
@@ -99,11 +99,11 @@ function lose() {
 //9. randomly generated number that player is trying to guess is between the number 19 and 120 
 function restart() {
     randomNumber = Math.floor(Math.random() * (101)) + 19;
-    $("#randomNumberToGuess").text(randomNumber);
+    $("#guessNumber").text(randomNumber);
     playerCounter = 0;
-    var crystalOne = Math.floor(Math.random() * 11) + 1;   
-    var crystalTwo = Math.floor(Math.random() * 11) + 1;     
-    var crystalThree = Math.floor(Math.random() * 11) + 1;  
-    var crystalFour = Math.floor(Math.random() * 11) + 1;  
+    crystalOne = Math.floor(Math.random() * 11) + 1;   
+    crystalTwo = Math.floor(Math.random() * 11) + 1;     
+    crystalThree = Math.floor(Math.random() * 11) + 1;  
+    crystalFour = Math.floor(Math.random() * 11) + 1;  
     $("#totalScore").text(playerCounter); 
 }
