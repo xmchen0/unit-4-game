@@ -6,8 +6,9 @@ $(document).ready(function() {
 /// GLOBAL VARIABLES
 
 //1. random generated number
-// define random integar between 19 and 120
-var randomNumber = Math.floor(Math.random() * (120 - 19)) + 19;
+var randomNumber = Math.floor(Math.random() * (120 - 19)) + 19; // define random integar between 19 and 120
+console.log(randomNumber)
+$("#randomNumberToGuess").text(randomNumber); // get randomNumberToGuess id and print out the random number displayed
 
 //2. win/lose counter
 var wins = 0;                   // win counter contains an integar value of zero
@@ -18,10 +19,10 @@ $("#loseCount").text(losses);   // get loseCount id and print out the values of 
 //3. crystals
 var hiddenNumber = []; // empty array to store object
 var numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; // array of integar of value between 1 and 12
-var crystalOne = $("#crystal1");  // get crystal1 id and assign to variable
-var crystalTwo = $("#crystal2");  // get crystal2 id and assign to variable
+var crystalOne = $("#crystal1");    // get crystal1 id and assign to variable
+var crystalTwo = $("#crystal2");    // get crystal2 id and assign to variable
 var crystalThree = $("#crystal3");  // get crystal3 id and assign to variable
-var crystalFour = $("#crystal4");  // get crystal4 id and assign to variable
+var crystalFour = $("#crystal4");   // get crystal4 id and assign to variable
 
 //4. player total score
 $("#totalScore").text(playerCounter);   // get totalScore id and print out the values of numeric keys
@@ -32,45 +33,43 @@ var playerCounter = 0;                  // player score counter contains an inte
 /// FUNCTIONS
 
 //1. at the start of the game, randomly generated number is displayed
-$("#randomNumberToGuess").text(randomNumber);
-
 //2. four (4) crystals represents a number hidden from player
 //3. each time player clicks on a crystal, the total score will increase by what the each crystal is worth
 //4. the only way to find out much each crystal is worth is by clicking on it to add more points
-    $("#crystal1").on("click", function() {
+    $("#crystal1").click(function() {
         playerCounter = playerCounter + crystalOne;
         $("#totalScore").text(playerCounter); 
-            if (playerCounter == randomNumber) {
+            if (playerCounter === randomNumber) {
             win();
             } else if (playerCounter > randomNumber) {
             lose();
             }   
         }); 
 
-    $("#crystal2").on("click", function() {
+    $("#crystal2").click(function() {
         playerCounter = playerCounter + crystalTwo;
         $("#totalScore").text(playerCounter); 
-            if (playerCounter == randomNumber) {
+            if (playerCounter === randomNumber) {
             win();
             } else if (playerCounter > randomNumber) {
             lose();
             }   
         });  
 
-    $("#crystal3").on("click", function() {
+    $("#crystal3").click(function() {
         playerCounter = playerCounter + crystalThree;
         $("#totalScore").text(playerCounter); 
-            if (playerCounter == randomNumber) {
+            if (playerCounter === randomNumber) {
             win();
             } else if (playerCounter > randomNumber) {
             lose();
             }   
         });  
 
-    $("#crystal4").on("click", function() {
+    $("#crystal4").click(function() {
         playerCounter = playerCounter + crystalFour;
         $("#totalScore").text(playerCounter); 
-            if (playerCounter == randomNumber) {
+            if (playerCounter === randomNumber) {
             win();
             } else if (playerCounter > randomNumber) {
             lose();
@@ -87,7 +86,7 @@ $("#randomNumberToGuess").text(randomNumber);
         wins++;
         $("#winCount").text(wins);
         restart();
-    };
+    }
 
 //6. if total score exceeds the random number, alert player lost
 //6.1 increment loss by 1,
@@ -100,7 +99,7 @@ $("#randomNumberToGuess").text(randomNumber);
         losses++;
         $("#loseCount").text(losses);
         restart();
-    };
+    }
 
 //7. game restarts, player total score resets to nil, random number is reset, hidden numbers in crystals are reset
 //8. crystals are randomly generated between the number 1 and 12
@@ -114,5 +113,5 @@ $("#randomNumberToGuess").text(randomNumber);
         numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
         randomNumber = Math.floor(Math.random() * (120 - 19)) + 19;
         $("#randomNumberToGuess").text(randomNumber);
-    };
-    
+    }
+});

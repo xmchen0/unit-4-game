@@ -3,21 +3,19 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Crystal Collector :: A Javascript Game</title>
+    <title>Crystals Collector :: A Javascript Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Link to CSS-->
     <link rel="stylesheet" href="assets/css/style.css">
     <!--Link to Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Lato|Sacramento" rel="stylesheet">
-    <!--Link to jQuery library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
     <div id="background">
     <!--Heading-->
     <div id="heading">
-        <h1>Crystal Collector</h1>
+        <h1>Crystals Collector</h1>
     </div>
 
     <!--Instructions-->
@@ -38,43 +36,37 @@
     <!--Random Number Container-->
     <div id="game-screen">
         <p><strong>Number to guess:</strong></p>
-    <div id=randomNumberToGuess></div>
+    <div id="randomNumberToGuess"><span id="guessNumber">0</span></div>
     
     <!--Counter Container-->
     <div id="win-lose-counter">
-        <p><strong>WINS: <span id="winCount"></span></strong></p>
-        <p><strong>LOSSES: <span id="loseCount"></span></strong></p>
+        <p>WINS: <span id="winCount"> 0</span></p>
+        <p>LOSSES:<span id="loseCount"> 0</span></p>
     </div>
 
     <!--Crystals Images-->
     <div id="crystal-container">
-        <div class="crystals">
-            <img src="https://i.ibb.co/bJcrhsW/Screen-Shot-2019-02-08-at-12-56-19-am.png" alt="Crystal" id="crystal1"/>
-        </div>
-        <div class="crystals">
-            <img src="https://i.ibb.co/q9pr7dJ/Screen-Shot-2019-02-08-at-12-56-30-am.png" alt="Crystal" id="crystal2"/>
-        </div>
-        <div class="crystals">
-            <img src="https://i.ibb.co/9bgXgD1/Screen-Shot-2019-02-08-at-12-56-39-am.png" alt="Crystal" id="crystal3"/>
-        </div>
-        <div class="crystals">
-            <img src="https://i.ibb.co/m9QDm47/Screen-Shot-2019-02-08-at-12-56-49-am.png" alt="Crystal" id="crystal4"/>
-        </div>
+        <img src="https://i.ibb.co/bJcrhsW/Screen-Shot-2019-02-08-at-12-56-19-am.png" alt="Crystal" id="crystal1"/>
+        <img src="https://i.ibb.co/q9pr7dJ/Screen-Shot-2019-02-08-at-12-56-30-am.png" alt="Crystal" id="crystal2"/>
+        <img src="https://i.ibb.co/9bgXgD1/Screen-Shot-2019-02-08-at-12-56-39-am.png" alt="Crystal" id="crystal3"/>
+        <img src="https://i.ibb.co/m9QDm47/Screen-Shot-2019-02-08-at-12-56-49-am.png" alt="Crystal" id="crystal4"/>
     </div>
 
     <!--Player Score Container-->
     <div id="score-container">
-        <div id="total-header"><strong>Your total score is: </strong></div>
-        <div id="total-score"><span id="totalScore"></span></div>
+        <div><strong>Your total score is: </strong></div>
+        <div id="totalScore">0</div>
         </div>
     </div>
-    </div>
+</div>
 
     <!--Footer-->
     <footer id="footer">
         <p>© 2019 Xiao Mei (Kathy) Chen</p>
     </footer>
 
+<!--Link to jQuery library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
 <!--Link to JavaScript-->
 <script src="assets/javascript/game.js" type="text/javascript"></script>
 
