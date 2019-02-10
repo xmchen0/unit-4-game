@@ -5,7 +5,7 @@
 //1. random generated number
 var randomNumber = Math.floor(Math.random() * (101)) + 19; // define random integar between 19 and 120
 console.log(randomNumber)
-$("#guessNumber").text(randomNumber); // get randomNumberToGuess id and print out the random number displayed
+$("#guessNumber").text(randomNumber); // get guessNumber id and print out the random number displayed
 
 //2. win/lose counter
 var wins = 0;                   // win counter contains an integar value of zero
@@ -14,10 +14,10 @@ var losses = 0;                 // lose counter contains an integar value of zer
 $("#loseCount").text(losses);   // get loseCount id and print out the values of numeric keys
 
 //3. crystals
-var crystalOne = Math.floor(Math.random() * 11) + 1;     // get crystal1 id and assign to variable
-var crystalTwo = Math.floor(Math.random() * 11) + 1;     // get crystal2 id and assign to variable
-var crystalThree = Math.floor(Math.random() * 11) + 1;   // get crystal3 id and assign to variable
-var crystalFour = Math.floor(Math.random() * 11) + 1;    // get crystal4 id and assign to variable
+var crystalOne = Math.floor(Math.random() * 11) + 1;     // define hidden random number between number 1 to 12
+var crystalTwo = Math.floor(Math.random() * 11) + 1;     // define hidden random number between number 1 to 12
+var crystalThree = Math.floor(Math.random() * 11) + 1;   // define hidden random number between number 1 to 12
+var crystalFour = Math.floor(Math.random() * 11) + 1;    // define hidden random number between number 1 to 12
 
 //4. player total score
 $("#totalScore").text(playerCounter);   // get totalScore id and print out the values of numeric keys
