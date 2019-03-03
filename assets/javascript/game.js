@@ -1,4 +1,66 @@
-/* UofT Bootcamp 2019 - Crystal Collector */
+/* 
+
+UofT Bootcamp 2019 - Crystal Collector 
+
+---
+
+Updates to game.js after receiving constructive feedback from Dimitry Besson 03-Mar-19
+
+Issue #1
+"The on click handlers for each crystal look very similar. 
+Can you think of a way to set all four of them in one go instead of doing them all separately? 
+Imagine you had 100 crystals. How would you handle this?" 
+
+My response: 
+The most logical way of iterating over a block of code repeatedly is using "for loop" statement. 
+My concern for using the for loop statement is the ability to loop through crystals with unique id. 
+Can I assign crystals different ids while using for loop to loop through the crystals and perform the on click function?
+Can I put these buttons in an array first?
+
+Possible solution:
+var crystalID = ['crystal1', 'crystal2', 'crystal3', 'crystal4'];
+var crystals = Math.floor(Math.random() * 11) + 1;
+var playerCounter = 0; 
+
+$("#crystalBtn").click(function () {
+    for(var i = 0; i < crystalID.length; i++) {
+        document.getElementById(crystalID[i]).addEventListener('click', click); 
+    }
+
+    playerCounter = playerCounter + crystals;
+    $("#totalScore").text(playerCounter);
+    if (playerCounter === randomNumber) {
+        win();
+    } else if (playerCounter > randomNumber) {
+        lose();
+    }
+
+});
+
+
+Issue #2
+"There is also a lot of overlap between the setup you do at the beginning of the game, and in the reset function. 
+Could some of the similarities be extracted and put into function?"
+
+My response: 
+How do I extract the similarities at the beginning and put into function?
+
+Possible solution:
+function startGame () {
+    playerCounter = 0; 
+    randomNumber = Math.floor(Math.random() * (101)) + 19;
+    crystals = Math.floor(Math.random() * 11) + 1;
+
+    $("#guessNumber").text(randomNumber);
+    $("#totalScore").text(playerCounter);
+}
+
+function restart () {
+    startGame();
+}
+
+*/
+
 
 /// ***** GLOBAL VARIABLES *****
 
@@ -30,45 +92,45 @@ var playerCounter = 0;                  // player score counter contains an inte
 //2. four (4) crystals represents a number hidden from player
 //3. each time player clicks on a crystal, the total score will increase by what the each crystal is worth
 //4. the only way to find out much each crystal is worth is by clicking on it to add more points
-    $("#crystal1").click(function() {
-        playerCounter = playerCounter + crystalOne;
-        $("#totalScore").text(playerCounter); 
-            if (playerCounter === randomNumber) {
-                win();
-            } else if (playerCounter > randomNumber) {
-                lose();
-            }
-        })
+$("#crystal1").click(function () {
+    playerCounter = playerCounter + crystalOne;
+    $("#totalScore").text(playerCounter);
+    if (playerCounter === randomNumber) {
+        win();
+    } else if (playerCounter > randomNumber) {
+        lose();
+    }
+})
 
-    $("#crystal2").click(function() {
-        playerCounter = playerCounter + crystalTwo;
-        $("#totalScore").text(playerCounter); 
-            if (playerCounter === randomNumber) {
-                win();
-            } else if (playerCounter > randomNumber) {
-                lose();
-            }   
-        })  
+$("#crystal2").click(function () {
+    playerCounter = playerCounter + crystalTwo;
+    $("#totalScore").text(playerCounter);
+    if (playerCounter === randomNumber) {
+        win();
+    } else if (playerCounter > randomNumber) {
+        lose();
+    }
+})
 
-    $("#crystal3").click(function() {
-        playerCounter = playerCounter + crystalThree;
-        $("#totalScore").text(playerCounter); 
-            if (playerCounter === randomNumber) {
-                win();
-            } else if (playerCounter > randomNumber) {
-                lose();
-            }   
-        })  
+$("#crystal3").click(function () {
+    playerCounter = playerCounter + crystalThree;
+    $("#totalScore").text(playerCounter);
+    if (playerCounter === randomNumber) {
+        win();
+    } else if (playerCounter > randomNumber) {
+        lose();
+    }
+})
 
-    $("#crystal4").click(function() {
-        playerCounter = playerCounter + crystalFour;
-        $("#totalScore").text(playerCounter); 
-            if (playerCounter === randomNumber) {
-                win();
-            } else if (playerCounter > randomNumber) {
-                lose();
-            }   
-        })  
+$("#crystal4").click(function () {
+    playerCounter = playerCounter + crystalFour;
+    $("#totalScore").text(playerCounter);
+    if (playerCounter === randomNumber) {
+        win();
+    } else if (playerCounter > randomNumber) {
+        lose();
+    }
+})
 
 //5. if total score equals to random number, alert player wins
 //5.1 increment win counter by 1,
@@ -101,9 +163,9 @@ function restart() {
     randomNumber = Math.floor(Math.random() * (101)) + 19;
     $("#guessNumber").text(randomNumber);
     playerCounter = 0;
-    crystalOne = Math.floor(Math.random() * 11) + 1;   
-    crystalTwo = Math.floor(Math.random() * 11) + 1;     
-    crystalThree = Math.floor(Math.random() * 11) + 1;  
-    crystalFour = Math.floor(Math.random() * 11) + 1;  
-    $("#totalScore").text(playerCounter); 
+    crystalOne = Math.floor(Math.random() * 11) + 1;
+    crystalTwo = Math.floor(Math.random() * 11) + 1;
+    crystalThree = Math.floor(Math.random() * 11) + 1;
+    crystalFour = Math.floor(Math.random() * 11) + 1;
+    $("#totalScore").text(playerCounter);
 }
